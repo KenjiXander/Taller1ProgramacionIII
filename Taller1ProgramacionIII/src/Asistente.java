@@ -25,7 +25,7 @@ public class Asistente {
 
     @Override
     public String toString() {
-        return "Asistente a " + pelicula + '\t' +
+        return "Comprar para la pelicula " + pelicula + '\t' +
                 ", cantidad de entradas: " + cantidad;
     }
 }
