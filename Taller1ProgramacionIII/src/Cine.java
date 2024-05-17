@@ -17,10 +17,8 @@ import java.util.Queue;
 //Programar los botones para conocer la cantidad de espacios disponibles 4 Puntos.
 //Suba su programa a la plataforma hasta que finalice la hora.
 
-//Declare la referencia Cola para almacenar asistentes
-
 public class Cine {
-
+    //Declare la referencia Cola para almacenar asistentes
     private Queue<Asistente> colaAsistentes;
     private int capacidad = 23; // Capacidad de la sala de cine
     private int entradasVendidas = 0; // Cantidad de entradas vendidas
