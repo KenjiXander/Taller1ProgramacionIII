@@ -31,11 +31,9 @@ public class FormularioCine {
 
         cine = new Cine();
 
-        // Inicializando los JComboBox
         cboPelicula = new JComboBox<>();
         cboCantidad = new JComboBox<>();
 
-        // Poniendo los valores para los JComboBox
         cboPelicula.addItem("Película 1");
         cboPelicula.addItem("Película 2");
 
@@ -49,18 +47,13 @@ public class FormularioCine {
                 String peliculaSeleccionada = (String) cboPelicula.getSelectedItem();
                 int cantidadSeleccionada = (Integer) cboCantidad.getSelectedItem();
 
-                // Crear un nuevo asistente con la película y cantidad seleccionada
                 Asistente asistente = new Asistente(peliculaSeleccionada, cantidadSeleccionada);
 
-                // Verificar si hay suficientes entradas disponibles
                 if (cine.entradasDisponibles() >= cantidadSeleccionada) {
-                    // Agregar el asistente a la cola del cine
                     cine.encolar(asistente);
 
-                    // Actualizar el JTextArea con la información de las entradas vendidas
                     txtEntradas.append(asistente.toString() + "\n");
 
-                    // Actualizar la cantidad de entradas disponibles
                     txtEntradas.append("Entradas disponibles: " + cine.entradasDisponibles() + "\n");
                 } else {
                     JOptionPane.showMessageDialog(null, "No hay suficientes entradas disponibles.");

@@ -1,4 +1,3 @@
-// Asistente.java
 public class Asistente {
     private String pelicula;
     private int cantidad;
